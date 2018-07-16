@@ -20,7 +20,7 @@ class MainActivity : CaptureActivity() {
 ```
 <h3>自定义使用</h3>
 如果只是简单的继承，那么得到的效果图如下：
-![这里写图片描述](https://img-blog.csdn.net/20180716104250857?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hlYmluMzIwMzIw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+<img src = "https://img-blog.csdn.net/20180716104250857?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hlYmluMzIwMzIw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"/>
 
 这里提供了几个可以自定义的属性；
 
