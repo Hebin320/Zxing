@@ -62,6 +62,24 @@ class MainActivity : CaptureActivity() {
     }
 }
 ```
+ **4. 附加功能**
+ 
+
+```
+class MainActivity : CaptureActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val view= LayoutInflater.from(this@MainActivity).inflate(R.layout.simple_title,null)
+        // 打开相册，识别图片二维码
+        view.tvTitle.setOnClickListener { openPhoto() }
+        // 打开闪光灯
+        view.tvTitle.setOnClickListener { openLight() }
+        setTitleView(view)
+    }
+
+}
+```
 <h3>扫描结果处理</h3>
 继承CaptureActivity.ResultListener，并且在oncreat里面，写上setListener(this)即可实现监听，然后在onResult里面做逻辑处理。
 
