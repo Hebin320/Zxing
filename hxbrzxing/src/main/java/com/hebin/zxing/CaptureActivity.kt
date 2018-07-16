@@ -155,6 +155,7 @@ open class CaptureActivity : AppCompatActivity(), Callback {
                             val recode = recode(result.toString())
                             println("Hebin$recode")
                             resultListener?.onResult(recode)
+                            continuePreview()
                         }
                     }).start()
                 }
@@ -302,11 +303,12 @@ open class CaptureActivity : AppCompatActivity(), Callback {
     fun drawViewfinder() {}
 
     fun handleDecode(result: Result, barcode: Bitmap) {
-        inactivityTimer!!.onActivity()
+        inactivityTimer?.onActivity()
         playBeepSoundAndVibrate()
         val recode = recode(result.toString())
         Log.e("Hebin", recode)
         resultListener?.onResult(recode)
+        continuePreview()
 
     }
 
@@ -450,6 +452,12 @@ open class CaptureActivity : AppCompatActivity(), Callback {
 
     interface ResultListener {
         fun onResult(result: String)
+    }
+
+    fun continuePreview(){
+        if (handler!=null){
+            handler?.restartPreviewAndDecode()
+        }
     }
 
     companion object {
