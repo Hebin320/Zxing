@@ -2,7 +2,6 @@
 二维码扫描的功能在很多APP上都会出现，较为常用的第三方库是zxing，zxing很强大，但是有时候我们并不需要那么复杂的功能，只需要简单的扫描、生成以及处理扫描结果，一般都是通过重写几个类来实现项目需求。我开发了几个项目都用到了扫描二维码的功能，第一个项目，写了个完整的功能，之后的项目都是从第一个项目里面复制代码的，几次之后，觉得有点繁琐，所以就单独封装成一个项目，传到jcenter上，以后再遇到扫描二维码的功能，只需要在gradle导入，即可实现快速开发了。
 
 [下载APP体验][2]
-![img](https://img-blog.csdn.net/20180717111915978?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hlYmluMzIwMzIw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 <h3>导入</h3>
 
@@ -22,8 +21,6 @@ class MainActivity : CaptureActivity() {
 
 ```
 <h3>自定义使用</h3>
-如果只是简单的继承，那么得到的效果图如下：
-![这里写图片描述](https://img-blog.csdn.net/20180716104250857?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0hlYmluMzIwMzIw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 这里提供了几个可以自定义的属性；
 
