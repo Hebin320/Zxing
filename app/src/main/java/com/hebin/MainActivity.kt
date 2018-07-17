@@ -26,12 +26,7 @@ class MainActivity : CaptureActivity(), CaptureActivity.ResultListener {
     }
 
     override fun onResult(result: String) {
-        if (result.contains("http")) {
-            Toast.makeText(this@MainActivity, "这是一个网页", Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this@MainActivity, "这不知道是什么东西", Toast.LENGTH_SHORT).show()
-
-        }
+        Toast.makeText(this@MainActivity, "扫描结果是：“$result”", Toast.LENGTH_SHORT).show()
     }
 
 
